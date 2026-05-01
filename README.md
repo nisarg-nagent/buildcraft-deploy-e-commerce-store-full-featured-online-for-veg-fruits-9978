@@ -1,2 +1,53 @@
-# buildcraft-deploy-e-commerce-store-full-featured-online-for-veg-fruits-9978
-Deployed via BuildCraft: E-commerce Store Full-featured Online for Veg Fruits
+# Full-Stack Application
+
+## Project Structure
+```
+├── frontend/        React + Vite + TypeScript
+├── backend/         Fastify + TypeScript API
+├── db/              Database migrations and seeds
+├── docker-compose.yml
+└── README.md
+```
+
+## Quick Start (Docker)
+```bash
+cp backend/.env.example backend/.env   # edit DB/JWT values
+docker-compose up --build
+```
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8001/api
+- Health: http://localhost:8001/api/health
+
+## Local Development
+
+### Backend
+```bash
+cd backend
+npm install
+cp .env.example .env    # edit values
+npm run dev             # starts on port 8001
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+cp .env.example .env
+npm run dev             # starts on port 3000
+```
+
+## Database
+```bash
+# Run migrations (PostgreSQL)
+psql $DATABASE_URL < db/migrations/001_init.sql
+psql $DATABASE_URL < db/migrations/002_seed.sql
+```
+
+## Changelog
+
+- 2026-05-01T14:30:26.302Z — Pipeline `69f4b7bec08898ec7a0a6983` (v1) stage `frontend_generator`
+  - Files generated/updated in this stage: 21
+
+---
+
+Generated using Buildcraft by Nagent

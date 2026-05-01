@@ -1,0 +1,18 @@
+# Nagent — Buildcraft generated project
+# See https://nagent.ai (platform) — this file is for tooling and humans.
+
+version: "1"
+platform: nagent
+generator: buildcraft
+
+buildcraft:
+  watermark: "Generated using Buildcraft by Nagent"
+
+pipeline:
+  id: "69f4a70693b8e0b1ddd7e3a8"
+  name: "E-commerce Store Full-featured Online for Veg Fruits Pipeline"
+
+stack:
+  frontend: "react"
+  backend: "fastify"
+  database: "postgresql"
